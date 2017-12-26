@@ -1,7 +1,7 @@
 {
   "name": "react-resizable-box-wrapper",
   "homepage": "https://stackblitz.com/edit/react-resizableboxwrapper",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A auto resize box for wrapping item",
   "main": "index.min.js",
   "scripts": {
