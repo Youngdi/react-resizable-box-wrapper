@@ -1,10 +1,12 @@
 const webpack = require('webpack');
+const path = require('path');
+
 module.exports = {
   entry: './index.js', // 要輸出的檔案入口
   output: {
-    filename: './bundle.min.js', //最終的目的檔案
+    filename: 'index.min.js', //最終的目的檔案
     library: 'react-resizable-box-wrapper',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [
@@ -19,7 +21,18 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
+    react: {
+        commonjs: 'react',
+        commonjs2: 'react',
+        amd: 'react',
+        root: 'React'
+    },
+    'react-dom': {
+        commonjs: 'react-dom',
+        commonjs2: 'react-dom',
+        amd: 'react-dom',
+        root: 'ReactDOM'
+    }
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),

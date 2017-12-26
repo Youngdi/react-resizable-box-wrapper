@@ -3,11 +3,12 @@
   "homepage": "https://stackblitz.com/edit/react-resizableboxwrapper",
   "version": "0.1.5",
   "description": "A auto resize box for wrapping item",
-  "main": "bundle.min.js",
+  "main": "index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack -d --watch",
-    "production": "webpack -p"
+    "production": "webpack -p",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,10 @@
   "keywords": [
     "react",
     "resize",
-    "wrapper"
+    "wrapper",
+    "react",
+    "reactjs",
+    "react-component"
   ],
   "author": "youngdi",
   "email": "u9951062@gmail.com",
@@ -26,10 +30,12 @@
   },
   "dependencies": {
     "react-draggable": "^2.2.6 || ^3.0.3",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
     "react-resizable": "1.7.5",
     "styled-components": "2.2.4"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
